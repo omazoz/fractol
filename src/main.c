@@ -6,35 +6,38 @@
 /*   By: omazoz <omazoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 19:01:11 by abiri             #+#    #+#             */
-/*   Updated: 2022/02/20 19:00:02 by omazoz           ###   ########.fr       */
+/*   Updated: 2022/02/28 22:18:46 by omazoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-
-
-t_fract_set	g_fract_set[FRACTAL_COUNT] =
+const t_fract_set	g_fract_set[FRACTAL_COUNT] = {
 {
-	{
-		.name="mandelbrot",
-		.function=draw_mandelbrot
-	}
-};
+	.name = "mandelbrot",
+	.function = draw_mandelbrot
+},
+{
+	.name = "julia",
+	.function = draw_julia
+},
+{
+	.name = "burning_ship",
+	.function = draw_burningship
+}};
 
-void init_calc(t_calc *calc)
+void	init_calc(t_calc *calc)
 {
 	calc->min_i = -2;
 	calc->max_i = 2;
 	calc->min_r = -2;
 	calc->max_r = 2;
-	// for now draw all screen
 	calc->area = (t_rect){0, WIDTH, 0, HEIGHT};
 }
 
 int	set_fractal(t_env *env, char *name)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < FRACTAL_COUNT)

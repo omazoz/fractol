@@ -21,14 +21,16 @@ For more knowledge check this link :
 * 🖱️ Scroll up to zoom in
 * 🖱️ Scroll down to zoom out
 * ⌨️ C : to change colors
+*	keys  1 2 3 4 5  to change forms of julia
 
 ## Compiling and running
 Run `make`. An executable will compile. Runs on OS X and Linux.
 
 Run it with `./fractol [fractal]`. Possible fractals are: `mandelbrot`, `julia`,
-`mandeldrop`. "MandelDrop". It's an "inverted" Mandelbrot set
+`burningship`. 
 ## Resources 
 * https://mathigon.org/course/fractals/mandelbrot
 * http://www.relativitybook.com/CoolStuff/erkfractals.html
 * https://rosettacode.org/wiki/Mandelbrot_set
+* http://paulbourke.net/fractals/burnship/
 

@@ -6,7 +6,7 @@
 #    By: omazoz <omazoz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 15:27:23 by omazoz            #+#    #+#              #
-#    Updated: 2022/02/24 22:55:30 by omazoz           ###   ########.fr        #
+#    Updated: 2022/02/28 21:44:37 by omazoz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,14 +26,10 @@ SRC = main.c\
 	  init.c\
 	  mandelbrot.c\
 	  images.c\
-	  julia.c
-
-SRC_B = main.c\
-		mandelbrot.c\
-		julia.c
+	  julia.c\
+	  burningship.c
 
 OBJ = $(addprefix $(OBJ_DIR)/, ${SRC:.c=.o})
-OBJ_B = $(addprefix $(OBJ_DIR)/, ${SRC_B:.c=.o})
 
 CFLAGS = -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit -L ./libft -lft -I ./libft
 
@@ -61,17 +57,13 @@ $(NAME) : $(LIBFT) $(OBJ) $(INCLUDES)
 $(LIBFT) :
 	make -C ./libft
 
-bonus: $(OBJ_B) $(INCLUDE) | fractal_art
-	gcc $(CFLAGS) $(OBJ_B) -o $(NAME)_bonus
-	@echo "BONUS IS READY";
-
 clean :
 	@make -C ./libft clean
 	@rm -rf $(OBJ_DIR)
 
 fclean : clean
 	@make -C ./libft fclean
-	@rm -rf $(NAME)
+	@rm -rf $(NAME) $(NAME)_bonus
 
 re : fclean all
 
