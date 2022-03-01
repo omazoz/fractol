@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: omazoz <omazoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 19:01:11 by abiri             #+#    #+#             */
-/*   Updated: 2022/02/28 22:18:46 by omazoz           ###   ########.fr       */
+/*   Created: 2022/02/11 19:01:11 by omzaoz            #+#    #+#             */
+/*   Updated: 2022/03/01 17:59:35 by omazoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int	main(int argc, char **argv)
 		return (1);
 	if (!init_mlx_events(&env))
 		return (1);
+	printf("%d",MAX_ITER);
 	mlx_loop_hook(env.mlx, loop_hook, &env);
 	mlx_loop(env.mlx);
 	return (0);

@@ -110,6 +110,6 @@ int	keyboard_events(int keycode, void *param)
 		env->color = (env->color + 1) % 3;
 	get_julia(keycode, env);
 	env->calc.draw(env, &env->calc);
-	//printf("pressed the key %d\n", keycode);
+	printf("pressed the key %d\n", keycode);
 	return (0);
 }
