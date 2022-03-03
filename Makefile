@@ -6,7 +6,7 @@
 #    By: omazoz <omazoz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 15:27:23 by omazoz            #+#    #+#              #
-#    Updated: 2022/02/28 21:44:37 by omazoz           ###   ########.fr        #
+#    Updated: 2022/03/03 20:03:05 by omazoz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ SRC = main.c\
 	  images.c\
 	  julia.c\
 	  burningship.c
-
 OBJ = $(addprefix $(OBJ_DIR)/, ${SRC:.c=.o})
 
 CFLAGS = -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit -L ./libft -lft -I ./libft
@@ -36,8 +35,6 @@ CFLAGS = -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit -L ./li
 LIBFT = ./libft/libft.a
 
 BLUE=\033[0;34m
-
-ORANG=\033[0;33m
 
 RESET=\033[0m
 
@@ -63,7 +60,7 @@ clean :
 
 fclean : clean
 	@make -C ./libft fclean
-	@rm -rf $(NAME) $(NAME)_bonus
+	@rm -rf $(NAME)
 
 re : fclean all
 
@@ -78,5 +75,27 @@ fractal_art:
 	@echo "██║     ██║  ██║██║  ██║╚██████╗   ██║      ╚██████╔╝███████╗";
 	@echo "╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝       ╚═════╝ ╚══════╝";
 	@echo "$(RESET)"
+	@echo "$(BLUE)";
 	@echo "                                                       ";
-	@cat fractal.ascii
+	@echo "	                                                ,_		"
+	@echo "                                              iW@@Wi		"
+	@echo "                                              !@@@@f		"
+	@echo "                                      __ ,gsmWmmWWmmmmsz		"
+	@echo "                                      M@W@@@@@@@@@@@@@@@@bd@P		"
+	@echo "                                   ,sm@@@@@@@@@@@@@@@@@@@@@W_		"
+	@echo "                                  ,m@@@@@@@@@@@@@@@@@@@@@@@@@s.		"
+	@echo "                      s.,_s..    ,W@@@@@@@@@@@@@@@@@@@@@@@@@@W		"
+	@echo "                    ,_@@@@@@@Ws. d@@@@@@@@@@@@@@@@@@@@@@@@@@@@		"
+	@echo "                    W@@@@@@@@@@@.@@@@@@@@@@@@@@@@@@@@@@@@@@@@A		"
+	@echo "      ----*-----i@@W@@@@@@@@@@@@W@@@@@@@@@@@@@@@@@@@@@@@@@@P  		"
+	@echo "                 ~~@@@@@@@@@@@@!@@@@@@@@@@@@@@@@@@@@@@@@@@@Ws		"
+	@echo "                    !*@@@@@@@@Af M@@@@@@@@@@@@@@@@@@@@@@@@@@@@		"
+	@echo "                      AfV*Aff   !@@@@@@@@@@@@@@@@@@@@@@@@@@@@		"
+	@echo "                                  !@@@@@@@@@@@@@@@@@@@@@@@@@@D-		"
+	@echo "                                   -A@@@@@@@@@@@@@@@@@@@@@@@*		"
+	@echo "                                      8@@@@@@@@@@@@@@@@@@AMWi		"
+	@echo "                                      **'VMA@@@@@@@@@@AK~'~~		"
+	@echo "                                             ,mWWm.		"
+	@echo "                                              ]@@@@P		"
+	@echo "                                               'V*		"
+	@echo "$(RESET)"
